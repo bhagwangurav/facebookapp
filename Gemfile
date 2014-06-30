@@ -8,6 +8,8 @@ gem 'rails', '3.2.12'
 gem 'sqlite3'
 gem 'zurb-foundation', '~> 4.0.0'
 gem 'devise'
+gem "socialization"
+gem "paperclip"
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

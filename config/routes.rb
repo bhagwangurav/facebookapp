@@ -1,6 +1,16 @@
 Cutekids::Application.routes.draw do
+  resources :posts
+
+
+  get "users/index"
+
+  get "users/show"
+
   get "home/index"
-  devise_for :users
+  devise_for :users,
+             :controllers => { :registrations => "devise/registrations",
+                               :confirmations => "devise/confirmations",
+                               :sessions => 'sessions'}
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

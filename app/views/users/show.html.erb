@@ -1,0 +1,12 @@
+<div class="row">
+	<table>
+		<% @users.each do |user| %>
+			<% unless current_user.email == user.email%>
+				<tr>
+					<td><%= user.email  %></td>
+					<td><%= link_to 'FOLLOW', edit_user_registration_path, :class => 'button [tiny small large]' %></td>
+				</tr>
+			<% end %>
+		<% end %>
+	</table>
+</div>
